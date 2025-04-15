@@ -2,7 +2,236 @@ html,
 body {
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
+  overscroll-behavior-y: none;
 }
+
+/*new code added*/
+
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.container{
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.content{
+  text-align: center;
+  z-index: 1;
+}
+
+.content h1{
+  font-size: 100px;
+}
+
+.back-video{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1; 
+  display: block;
+  border: none;
+}
+
+
+header.main-header {
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+
+
+nav{
+  width: 100%;
+  position: absolute;
+  top: -180px;
+  left: -100px;
+  padding: 10px 2%;
+  display: flex;
+  align-items: center;
+  justify-content: safe;
+
+}
+
+nav .logo{
+  width: 600px;
+
+}
+
+#sidebar{
+  position: fixed;
+  width: 200px;
+  height: 100%;
+  right: -200px;
+  transition: all 500ms linear;
+  background: rgba(255, 255, 255, 0.2);
+  
+}
+
+#sidebar.active{
+  right: 0px;
+}
+
+#sidebar ul li{
+  list-style: none;
+  color: aliceblue;
+  padding: 15px 10px;
+  font-family: Georgia;
+}
+
+#sidebar .toggle-btn{
+  position: absolute;
+  right: 230px;
+  top: 20px;
+
+}
+
+#sidebar .toggle-btn span{
+  display: block;
+  width: 60px;
+  height: 2px;
+  background: rgb(228,227,233);
+  margin: 6px 0px;
+
+  transition: opacity 0.3 ease;
+}
+
+/* search bar code */
+
+.search-wrapper{
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  align-items: center;
+  padding-top: 10px;
+  color: #696969;
+  font-family: Didot;
+  font-size: 45px;
+  font-weight: bold;
+}
+
+#search-btn{
+  padding: 6px 12px;
+  font-size: 15px;
+  font-family: Didot;
+  height: 30px;
+  width: 100px;
+  display: inline-block;
+  
+}
+
+
+#search{
+  width: 250px;
+  
+}
+
+input{
+  font-size: 1rem;
+}
+
+.clothes-cards{
+  display: grid;
+  grid-template-columns: repeat(auto-fill), minmax(150px, 1fr); /* might need to adjust the minmax */
+  gap: .25rem;
+  margin-top: 1rem;
+}
+
+.card{
+  border: 1px solid black;
+  background-color: white;
+  padding: .5rem;
+
+}
+
+#image-container img{
+  width: 200px;
+  height: auto;
+  margin: 10px;
+  object-fit: cover;
+
+}
+
+#image-container{
+  justify-content: center;
+  flex-wrap: wrap;
+  display: flex;
+}
+
+/* grid images code */
+.display-container{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  padding: 20px;
+  margin: 0 auto;
+  max-width: 1100px;
+  position: relative;
+  z-index: 2; /* ensures images are above */
+}
+
+.display-container img{
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+  
+}
+
+.niche-boarder{
+  padding: 10px;
+  margin: 0 auto;
+  border: 2px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  border-radius: 24px;
+}
+
+
+.niches{
+  text-align: center;
+  font-family: Didot;
+  padding-top: 50px;
+  font-size: 30px;
+  color: #696969;
+}
+
+/* puts image behind the 3 pictures HOLD OFF OF THIS IDEA*/
+
+/* .behind-fsh {
+  position: relative;
+  width: 100%;
+  height: 800px;  /* controls the size of the image */
+/* } */
+
+/* .fsh-behind{
+  position: absolute;
+  top: 600px;
+  left: 250px;
+  transform: translate(-50%);
+  width: 700px;
+  height: 100%;
+  z-index: 1;
+  filter: blur(1px);
+  pointer-events: none;
+} */ */
+
+
+
+
+
+/* end of new code added */
+
 
 .main-header {
   background-color: rgba(0, 0, 0, 0.3);
@@ -50,21 +279,22 @@ body {
 
 .footer {
   display: flex;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
-  background-color: rgba(0, 0, 0, 0.3);
-  padding: 10px;
+  background-color:#777;;
+  padding: 40px;
+  width: 100%;
+  height: 10sea0px;
+  font-family: Didot;
+  font-size: 30px;
+  
 }
 
-button {
-  text-align: center;
-  background-color: #666;
-  border: none;
-  padding-left: 10px;
-  padding-right: 10px;
-  height: 40px;
-  border-radius: 10px;
-  color: white;
-  font-size: 22px;
-  cursor: pointer;
-  margin: 5px;
+.all-rights{
+  font-size: 10px;
+  font-weight: bold;
+  font-family: Didot;
 }
+
+

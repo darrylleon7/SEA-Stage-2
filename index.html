@@ -1,16 +1,82 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>LA TV Shows | Home</title>
-    <meta name="description" content="A Catalog of Shows Set in Los Angeles" />
+    <title>Fashion | Seeker</title>
+    <meta name="description" content="Finding Your Niche" />
+    <link rel="icon" href="favicon-96x96.png" type="image/png"> <!--logo on tab -->
     <link rel="stylesheet" href="style.css" />
-    <script type="text/javascript" src="scripts.js"></script>
   </head>
 
   <body>
     <header class="main-header">
-      <h1 class="title">LA TV Shows</h1>
+      <!--new code added-->
+
+      <!--Hero-Image Code-->
+      <div class="container">
+        <video autoplay loop muted plays-inline class="back-video">
+          <source src="medias/coolfashion.mp4" type="video/mp4">
+        
+        </video>
+
+        <!--logo code-->
+        <nav>
+          <img src="medias/fashionseekerlogo.png" class="logo">
+        </nav>
+
+        
+      <!--Sidebar Code-->
+        <div id="sidebar">
+          <div class="toggle-btn" onclick="toggleSidebar()" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <ul>
+            <li>Home</li>
+            <li>About Us</li>
+            <li>Log In</li>
+          </ul>
+
+
+        </div>
+      <!--End of Sidebar Code-->
+      
+      </div>
+      
+      <!--end of new code added-->
     </header>
+    <div class="niches">
+      <h1>Normalizing Niche</h1>
+    
+    </div>
+    <!--Display Photo Code-->
+
+    <!-- <div class="behind-fsh">
+      <img src="medias/stencilfsh.png" alt="image 1" class="fsh-behind">
+    </div> -->
+
+    <div class="display-container">
+      <img src="medias/fas1.jpg" alt="image 1" class="niche-boarder">
+      <img src="medias/fshh1.jpg" alt="image 2" class="niche-boarder">
+      <img src="medias/fsh3.jpg" alt="image 3" class="niche-boarder">
+
+    </div>
+
+    <!-- Search Button & Text Above -->
+    <div class="search-wrapper">
+      <label for="search">Find Your Garment</label>
+      <input type="search" id="search">
+      <button id="search-btn">Search</button> <!-- New button -->
+    </div>
+
+
+    <!--For the JS Code-->
+    <div id="image-container">
+
+
+    </div>
+
+
     <div id="card-container"></div>
     <div class="card" style="display: none">
       <div class="card-content">
@@ -19,13 +85,37 @@
         <ul>
           <li>Bullet Point 1</li>
           <li>Bullet Point 2</li>
-          <li>Bullet Point 3</li>
+          <li>Bullet Point 3</li> 
         </ul>
       </div>
     </div>
+
+    
+
+    
+
+<!-- bulk of code below *new stuff added is here* -->
+   <!-- <main>
+      <div class="view">
+
+      </div>
+
+
+
+    </main> -->
+
+<!-- end of the code -->  
+
+<!--Footer Code-->
+
     <div class="footer">
-      <button onclick="quoteAlert();">Get A Quote!</button>
-      <button onclick="removeLastCard();">Remove A Card!</button>
+      <p>Seek Your Fashion </p>
+      <p class="all-rights">© 2025 SEA Web Project | All rights reserved.</p>
     </div>
+    
+<!--End of Footer Code-->
+
+
+  <script type="text/javascript" src="scripts.js"></script>
   </body>
 </html>
